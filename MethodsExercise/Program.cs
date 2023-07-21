@@ -6,15 +6,26 @@ namespace MethodsExercise
     {
         static void Main(string[] args)
         {
-            ShortStory();
+            Console.WriteLine("What would you like to do?  1 for Story; 2 for Math problems...");
+            string select = Console.ReadLine();
+            if (select == "1")
+            {
+                ShortStory();
+            }
 
-            double twoPlusfour = Add(2, 4);
-            Console.WriteLine(twoPlusfour);
+            else
+            {
 
-            double dividing = Divide(42, 7);
-            Console.WriteLine(dividing);
+                double twoPlusfour = Add(2, 4);
+                Console.WriteLine(twoPlusfour);
 
-            Console.WriteLine(Sum(23, 44, 32));
+                Add(78, 99);
+
+                double dividing = Divide(42, 7);
+                Console.WriteLine(dividing);
+
+                Console.WriteLine(Sum(23, 44, 32));
+            }
             
 
 
