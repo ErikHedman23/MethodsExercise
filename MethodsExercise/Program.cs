@@ -13,6 +13,11 @@ namespace MethodsExercise
 
             double dividing = Divide(42, 7);
             Console.WriteLine(dividing);
+
+            Console.WriteLine(Sum(23, 44, 32));
+            
+
+
         }
 
         public static void ShortStory()
@@ -46,9 +51,34 @@ namespace MethodsExercise
             return num1 / num2;
         }
 
-            
-                    
+        public static int Sum(params int[] numbers)
+        {
+            int sum = 0;
+            foreach(int num in numbers)
+            {
+                sum += num;
+            }
+            return sum;
+            //Multiplication is set up the sane way as addition but change + to *
+        }
 
-                
+        public static double Subtract(params double[] numbers)
+        {
+            double difference = numbers[0];
+            for (int i = 0; i < numbers.Length - 1; i++)
+            {
+                difference -= numbers[i = 1];
+            }
+            return difference;
+            /* To subtract with paramsm you must use a for loop.
+            Your index always starts at 0, so keep that in mind.
+            .Length states the entirety of the array of numbers[].
+            The .Length - 1 tells the program to stop after the last number in the index so that it actually has an integer to subtract.
+            i++ tells the loop to increase in the iteration by +1 after each iteration.
+            difference -= numbers[i = 1]; tells the loop to take the difference
+            and subtract it by the next number in the iteration; instead of, subtracting it by itself; i.e.: index 0 - 0
+            return difference means that it will return the difference because this is
+            not a void method but rather a double method*/
+           }                       
     }
 }
