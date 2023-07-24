@@ -26,9 +26,13 @@ namespace MethodsExercise
 
                 Console.WriteLine(Sum(23, 44, 32));
             }
-             else
+             else if (select == "3")
             {
                 Factorial();
+            }
+            else
+            {
+                While();
             }
          
 
@@ -119,6 +123,19 @@ namespace MethodsExercise
              i=2 * factorial = 2
              i=3 * factorial (which = 2) = 6
              End of for loop*/
+        }
+        public static void While()
+        {
+            int sum = 0;
+            int num = 100;
+
+            while (num >= 0)
+            {
+                sum += num;
+                num--;
+            }
+
+            Console.WriteLine(sum);
         }
     }
 }
