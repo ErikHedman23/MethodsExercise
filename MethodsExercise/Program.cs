@@ -13,7 +13,7 @@ namespace MethodsExercise
                 ShortStory();
             }
 
-            else
+            else if (select == "2")
             {
 
                 double twoPlusfour = Add(2, 4);
@@ -21,13 +21,16 @@ namespace MethodsExercise
 
                 Add(78, 99);
 
-                double dividing = Divide(42, 7);
+                double dividing = Divide(42, 7);   
                 Console.WriteLine(dividing);
 
                 Console.WriteLine(Sum(23, 44, 32));
             }
-            
-
+             else
+            {
+                Factorial();
+            }
+         
 
         }
 
@@ -90,6 +93,32 @@ namespace MethodsExercise
             and subtract it by the next number in the iteration; instead of, subtracting it by itself; i.e.: index 0 - 0
             return difference means that it will return the difference because this is
             not a void method but rather a double method*/
-           }                       
+           }
+        public static void Factorial()
+        {
+            // Read an integer from the user and store it in the 'num' variable
+            Console.WriteLine("Please input a number here:");
+            
+            int num = Convert.ToInt32(Console.ReadLine());
+
+            // Initialize a variable called 'factorial' to 1
+            int factorial = 1;
+
+            // Start a loop that runs from 1 to 'num'
+            for (int i = 1; i <= num; i++)
+            {
+                // Multiply the 'factorial' variable by the current value of 'i'
+                factorial *= i;
+            }
+
+            // Print the result (the factorial value) to the console
+            Console.WriteLine(factorial);
+
+            /*if the int num = 3; the loop will look like this:
+             i=1 * factorial (which = 1)
+             i=2 * factorial = 2
+             i=3 * factorial (which = 2) = 6
+             End of for loop*/
+        }
     }
 }
